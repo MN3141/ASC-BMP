@@ -4,12 +4,12 @@
   <MACROS>
     <VERSION value="BCB.06.00"/>
     <PROJECT value="ascbmp.exe"/>
-    <OBJFILES value="ascbmp.obj Unit1.obj Imago.obj BMP.obj"/>
+    <OBJFILES value="ascbmp.obj unitPrincipal.obj Imago.obj BMP.obj unitImagineGenerata.obj"/>
     <RESFILES value="ascbmp.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
     <DEFFILE value=""/>
-    <RESDEPEN value="$(RESFILES) Unit1.dfm"/>
+    <RESDEPEN value="$(RESFILES) unitPrincipal.dfm unitImagineGenerata.dfm"/>
     <LIBFILES value=""/>
     <LIBRARIES value=""/>
     <SPARELIBS value="vcl.lib rtl.lib"/>
@@ -56,9 +56,10 @@
   <FILELIST>
       <FILE FILENAME="ascbmp.res" FORMNAME="" UNITNAME="ascbmp.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="ascbmp.cpp" FORMNAME="" UNITNAME="ascbmp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME="Unit1.cpp" FORMNAME="Form1" UNITNAME="Unit1" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="unitPrincipal.cpp" FORMNAME="fPrincipal" UNITNAME="unitPrincipal" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="Imago.cpp" FORMNAME="" UNITNAME="Imago" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="BMP.cpp" FORMNAME="" UNITNAME="BMP" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="unitImagineGenerata.cpp" FORMNAME="fImage" UNITNAME="unitImagineGenerata" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
   </FILELIST>
   <BUILDTOOLS>
   </BUILDTOOLS>
