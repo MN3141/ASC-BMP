@@ -4,7 +4,7 @@
   <MACROS>
     <VERSION value="BCB.06.00"/>
     <PROJECT value="ascbmp.exe"/>
-    <OBJFILES value="ascbmp.obj Unit1.obj Imago.obj BMP.obj"/>
+    <OBJFILES value="ascbmp.obj Unit1.obj Imago.obj Fisier.obj"/>
     <RESFILES value="ascbmp.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
@@ -58,7 +58,7 @@
       <FILE FILENAME="ascbmp.cpp" FORMNAME="" UNITNAME="ascbmp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="Unit1.cpp" FORMNAME="Form1" UNITNAME="Unit1" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="Imago.cpp" FORMNAME="" UNITNAME="Imago" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME="BMP.cpp" FORMNAME="" UNITNAME="BMP" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Fisier.cpp" FORMNAME="" UNITNAME="Fisier" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
   </FILELIST>
   <BUILDTOOLS>
   </BUILDTOOLS>
