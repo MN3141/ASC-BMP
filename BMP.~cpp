@@ -11,7 +11,7 @@ BMP::BMP(AnsiString fileName,AnsiString text):Imago(text)
 }
 void BMP:: createImage() //OBS:EM(end of medium) are codul ASCII x19
 {
-       this->imageFile->WriteBuffer(this->pixels+1,this->numPixels);  //OBS:WriteBuffer ia buffer-ul de la indicele 0
+       this->imageFile->WriteBuffer(this->pixels+1,this->numPixels*3);  //OBS:WriteBuffer ia buffer-ul de la indicele 0
                                                                       //dar string-ul pleaca de la indicele 1!!!                                                  
 }
 BMP::~BMP()//necesar dezalocarii memoriei

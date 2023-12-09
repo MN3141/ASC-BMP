@@ -22,7 +22,6 @@ void __fastcall TfPrincipal::btnGenImagineClick(TObject *Sender)
          static int counter=0;//variabila pseudoglobala
         AnsiString fileName="imagini\\image"+IntToStr(counter)+".txt";//OBS:Indexarea se face de la 1 pentru string-uri!!
         counter++;
-        ShowMessage(inputMemo->Text);
         BMP test(fileName,inputMemo->Text);
         test.createImage();
         //fImage->Show();
