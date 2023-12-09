@@ -2,6 +2,8 @@
 
 #ifndef ImagoH
 #define ImagoH
+#include<string>
+using namespace std;
 typedef unsigned char byte;
 struct Pixel{
 //cod RGB
@@ -13,7 +15,7 @@ class Imago{
      protected:
      Pixel *pixels;
      int numPixels;
-     Imago(int size=0);
+     Imago(string text=" ");
      ~Imago();
 };
 //---------------------------------------------------------------------------

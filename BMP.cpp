@@ -5,11 +5,12 @@
 
 #include "BMP.h"
 using namespace std;
-BMP::BMP(string fileName,int size):Imago(size)
+BMP::BMP(char *fileName,string text):Imago(text)
 {
-
+        this->fileName=fileName;
+        this->imageFile.open(this->fileName);
 }
-BMP::~BMP()
+BMP::~BMP()//necesar dezalocarii memoriei
 {
 
 }

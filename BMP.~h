@@ -4,11 +4,13 @@
 #define BMPH
 #include<string>
 #include "Imago.h"
+#include<fstream>
 using namespace std;
 class BMP:public Imago{
-        string fileName;
+        char* fileName;
+        //fstream imageFile;
         public:
-        BMP(string fileName=" ",int size=0);
+        BMP(char *fileName=" ",string text=" ");
         ~BMP();
         open();
 };

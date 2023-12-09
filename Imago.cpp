@@ -2,12 +2,17 @@
 
 
 #pragma hdrstop
-
 #include "Imago.h"
-Imago ::Imago(int size)
+#include<iostream>
+using namespace std;
+Imago :: Imago(string text)
 {
-   this->numPixels=size;
-   this->pixels=new Pixel[size];
+     this->numPixels=text.length();
+     this->pixels=new Pixel[numPixels];
+     for(int i=0;i<numPixels;i++)
+     {
+      (pixels+i)->b=text.operator[](i);
+     }
 }
 Imago::~Imago()
 {
