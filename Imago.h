@@ -2,7 +2,7 @@
 
 #ifndef ImagoH
 #define ImagoH
-#include<string>
+#include <vcl.h>
 using namespace std;
 typedef unsigned char byte;
 struct Pixel{
@@ -13,9 +13,10 @@ struct Pixel{
 };
 class Imago{
      protected:
+     AnsiString text;
      Pixel *pixels;
      int numPixels;
-     Imago(string text=" ");
+     Imago(AnsiString text=" ");
      ~Imago();
 };
 //---------------------------------------------------------------------------

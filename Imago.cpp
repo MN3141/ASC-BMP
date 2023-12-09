@@ -3,14 +3,14 @@
 
 #pragma hdrstop
 #include "Imago.h"
-#include<iostream>
-using namespace std;
-Imago :: Imago(string text)
+Imago :: Imago(AnsiString text)
 {
-     this->numPixels=text.length();
-     this->pixels=new Pixel[numPixels];
-     for(int i=0;i<numPixels;i++)
+     this->numPixels=text.Length();
+     this->pixels=new Pixel[numPixels+1];
+     for(int i=1;i<=numPixels;i++) //OBS:Indexarea se face de la 1 pentru string-uri!!
      {
+     (pixels+i)->r=0;
+     (pixels+i)->g=0;
       (pixels+i)->b=text.operator[](i);
      }
 }

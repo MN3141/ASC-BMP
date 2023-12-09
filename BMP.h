@@ -2,17 +2,15 @@
 
 #ifndef BMPH
 #define BMPH
-#include<string>
 #include "Imago.h"
-#include<fstream>
-using namespace std;
 class BMP:public Imago{
-        char* fileName;
-        fstream imageFile;
+        AnsiString fileName;
+        TFileStream *imageFile;
         public:
-        BMP(char *fileName=" ",string text=" ");
+        BMP(AnsiString fileName="imagini\\default.txt",AnsiString text=" ");
+        void createImage();
         ~BMP();
-        open();
+
 };
 //---------------------------------------------------------------------------
 #endif
