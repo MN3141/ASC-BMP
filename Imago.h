@@ -18,7 +18,7 @@ class Imago{
      int imageHeight;
      Pixel *pixels;
      int numPixels;
-     Imago(AnsiString text=" ");
+     Imago(AnsiString text="ACESTA ESTE UN TEST");
      ~Imago();
 };
 //---------------------------------------------------------------------------

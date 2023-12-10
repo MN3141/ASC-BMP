@@ -21,26 +21,26 @@ object fPrincipal: TfPrincipal
     Caption = 'ASC-BMP'
   end
   object inputMemo: TMemo
-    Left = 368
-    Top = 136
-    Width = 241
-    Height = 113
+    Left = 216
+    Top = 72
+    Width = 465
+    Height = 201
     Lines.Strings = (
       'inputMemo')
     ScrollBars = ssVertical
     TabOrder = 0
   end
   object btnGenImagine: TButton
-    Left = 224
-    Top = 304
-    Width = 121
-    Height = 65
+    Left = 216
+    Top = 296
+    Width = 153
+    Height = 81
     Caption = 'Generare imagine'
     TabOrder = 1
     OnClick = btnGenImagineClick
   end
   object btnGenText: TButton
-    Left = 496
+    Left = 536
     Top = 296
     Width = 153
     Height = 81

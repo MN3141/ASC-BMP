@@ -1,6 +1,6 @@
 object fPrincipal: TfPrincipal
-  Left = 292
-  Top = 253
+  Left = 488
+  Top = 170
   Width = 1044
   Height = 515
   Caption = 'IPRS'
@@ -31,10 +31,10 @@ object fPrincipal: TfPrincipal
     TabOrder = 0
   end
   object btnGenImagine: TButton
-    Left = 224
-    Top = 304
-    Width = 121
-    Height = 65
+    Left = 232
+    Top = 296
+    Width = 153
+    Height = 81
     Caption = 'Generare imagine'
     TabOrder = 1
     OnClick = btnGenImagineClick
@@ -46,5 +46,6 @@ object fPrincipal: TfPrincipal
     Height = 81
     Caption = 'Generare text'
     TabOrder = 2
+    OnClick = btnGenTextClick
   end
 end

@@ -4,25 +4,39 @@
 
 #include "BMP.h"
 BMP::BMP(AnsiString fileName,AnsiString text):Imago(text)
-{
+{       
         this->fileName=fileName;
+       /*if(FileExists(this->fileName) )
+                {
+                 ShowMessage("Exista deja");
+                }
+       else
+       {
+       ShowMessage(this->fileName+"nu exista");
+        this->imageFile=new TFileStream( this->fileName,fmCreate);
+       } */
        this->imageFile=new TFileStream( this->fileName,fmCreate);
+       if(this->fileName=="imagini\\default.txt") //pt a preveni o potentiala eroare privind citirea fisierului
+        { char *tempBuffer="ACESTA ESTE UN TEST.";
+          this->imageFile->WriteBuffer(tempBuffer,20);
+        }
 }
 void BMP:: createImage() //OBS:EM(end of medium) are codul ASCII x19
 
 {       //OBS:WriteBuffer ia buffer-ul de la indicele 0
         //dar string-ul pleaca de la indicele 1!!
         //\n linie noua
-        char *test="TEST";
+        char *test="\nTEST";
        this->imageFile->WriteBuffer(this->pixels+1,this->numPixels*3);
-       this->imageFile->WriteBuffer(test,4);
+       this->imageFile->WriteBuffer(test,5);
 }
 AnsiString BMP::createText(AnsiString fileName)
 {
-   this->imageFile=new TFileStream(fileName,fmOpenRead);
+   //this->imageFile=new TFileStream(this->fileName,fmOpenRead);
    char *buffer=" ";
    int startIndex=0;
    int imageSize=0;
+   this->imageFile=new TFileStream(fileName,fmOpenRead);
    this->imageFile->Seek(10,soFromBeginning);//setare pozitie cursor
    this->imageFile->ReadBuffer(buffer,1);
    startIndex=*buffer ;

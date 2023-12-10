@@ -23,7 +23,7 @@ void __fastcall TfPrincipal::btnGenImagineClick(TObject *Sender)
         AnsiString fileName="imagini\\image"+IntToStr(counter)+".txt";//OBS:Indexarea se face de la 1 pentru string-uri!!
         counter++;
         BMP test(fileName,inputMemo->Text);
-        test.createImage();
+//        test.createImage();
         //fImage->Show();
         //fPrincipal->Hide();
 }
@@ -31,7 +31,9 @@ void __fastcall TfPrincipal::btnGenImagineClick(TObject *Sender)
 
 void __fastcall TfPrincipal::btnGenTextClick(TObject *Sender)
 {
-               ShowMessage("TEST");
+               //BMP test;
+               //test.createText("imagini\\test2.bmp");
 }
 //---------------------------------------------------------------------------
+
 
