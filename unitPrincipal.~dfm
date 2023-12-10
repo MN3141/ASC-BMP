@@ -1,6 +1,6 @@
 object fPrincipal: TfPrincipal
-  Left = 301
-  Top = 264
+  Left = 292
+  Top = 253
   Width = 1044
   Height = 515
   Caption = 'IPRS'

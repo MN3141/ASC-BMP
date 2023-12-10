@@ -9,7 +9,7 @@ class BMP:public Imago{
         public:
         BMP(AnsiString fileName="imagini\\default.txt",AnsiString text=" ");
         void createImage();
-        void createText();
+        AnsiString createText(AnsiString fileName);
         ~BMP();
 
 };

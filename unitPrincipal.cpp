@@ -1,7 +1,3 @@
-/*-------------------------------
-  |Convertor ASCII-BMP si invers|
-  -------------------------------
-*/
 //---------------------------------------------------------------------------
 #include <vcl.h>
 #pragma hdrstop
@@ -32,3 +28,10 @@ void __fastcall TfPrincipal::btnGenImagineClick(TObject *Sender)
         //fPrincipal->Hide();
 }
 //---------------------------------------------------------------------------
+
+void __fastcall TfPrincipal::btnGenTextClick(TObject *Sender)
+{
+               ShowMessage("TEST");
+}
+//---------------------------------------------------------------------------
+

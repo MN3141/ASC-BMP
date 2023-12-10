@@ -7,8 +7,8 @@ using namespace std;
 typedef unsigned char byte;
 struct Pixel{
 //cod RGB
-  // byte r;
-   //byte g;
+   byte r;
+   byte g;
    byte b;
 };
 class Imago{

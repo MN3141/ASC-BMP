@@ -1,6 +1,6 @@
 //---------------------------------------------------------------------------
-
-
+/*fisierele *.bmp stocheaza pixelii de jos in sus,de la stanga la dreapta
+  fisierele *.bmp folosesc notatia little endian*/
 #pragma hdrstop
 
 #include "BMP.h"
@@ -10,9 +10,29 @@ BMP::BMP(AnsiString fileName,AnsiString text):Imago(text)
        this->imageFile=new TFileStream( this->fileName,fmCreate);
 }
 void BMP:: createImage() //OBS:EM(end of medium) are codul ASCII x19
+
+{       //OBS:WriteBuffer ia buffer-ul de la indicele 0
+        //dar string-ul pleaca de la indicele 1!!
+        //\n linie noua
+        char *test="TEST";
+       this->imageFile->WriteBuffer(this->pixels+1,this->numPixels*3);
+       this->imageFile->WriteBuffer(test,4);
+}
+AnsiString BMP::createText(AnsiString fileName)
 {
-       this->imageFile->WriteBuffer(this->pixels+1,this->numPixels*3);  //OBS:WriteBuffer ia buffer-ul de la indicele 0
-                                                                      //dar string-ul pleaca de la indicele 1!!!                                                  
+   this->imageFile=new TFileStream(fileName,fmOpenRead);
+   char *buffer=" ";
+   int startIndex=0;
+   int imageSize=0;
+   this->imageFile->Seek(10,soFromBeginning);
+   this->imageFile->ReadBuffer(buffer,1);
+   startIndex=*buffer ;
+   this->imageFile->Seek(2,soFromBeginning);
+   this->imageFile->ReadBuffer(buffer,1);
+   imageSize=*buffer;
+   ShowMessage(startIndex);
+   ShowMessage(imageSize);
+   return text;
 }
 BMP::~BMP()//necesar dezalocarii memoriei
 {

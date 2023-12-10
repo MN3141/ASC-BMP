@@ -1,6 +1,6 @@
 object fPrincipal: TfPrincipal
-  Left = 301
-  Top = 264
+  Left = 488
+  Top = 170
   Width = 1044
   Height = 515
   Caption = 'IPRS'
@@ -46,5 +46,6 @@ object fPrincipal: TfPrincipal
     Height = 81
     Caption = 'Generare text'
     TabOrder = 2
+    OnClick = btnGenTextClick
   end
 end
