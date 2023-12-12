@@ -4,8 +4,8 @@
 
 #include "BMP.h"
 BMP::BMP(AnsiString fileName,AnsiString text):Imago(text)
-{       
-        this->fileName=fileName;
+{
+            this->fileName=fileName;
        /*if(FileExists(this->fileName) )
                 {
                  ShowMessage("Exista deja");
@@ -26,29 +26,25 @@ void BMP:: createImage() //OBS:EM(end of medium) are codul ASCII x19
 {       //OBS:WriteBuffer ia buffer-ul de la indicele 0
         //dar string-ul pleaca de la indicele 1!!
         //\n linie noua
-        char *test="\nTEST";
        this->imageFile->WriteBuffer(this->pixels+1,this->numPixels*3);
-       this->imageFile->WriteBuffer(test,5);
 }
 AnsiString BMP::createText(AnsiString fileName)
 {
-   //this->imageFile=new TFileStream(this->fileName,fmOpenRead);
-   char *buffer=" ";
-   int startIndex=0;
-   int imageSize=0;
-   this->imageFile=new TFileStream(fileName,fmOpenRead);
-   this->imageFile->Seek(10,soFromBeginning);//setare pozitie cursor
-   this->imageFile->ReadBuffer(buffer,1);
-   startIndex=*buffer ;
-   this->imageFile->Seek(2,soFromBeginning);
-   this->imageFile->ReadBuffer(buffer,4);
-   for(int i=0;i<4;i++) //*.bmp foloseste notatie little endian
+   AnsiString text;
+   this->fileName=fileName;
+   if(FileExists(this->fileName) )
    {
-      imageSize=imageSize+ *(buffer+i);
-      imageSize=imageSize<<(8*(i+1));
+        char *temp="Balgrad, imamo problem";
+       //  this->imageFile=new TFileStream( this->fileName,fmOpenRead);
+         //this->imageFile->ReadBuffer(temp,30);
+         text=temp;
+
    }
-   ShowMessage(startIndex);
-   ShowMessage(imageSize);
+   else{
+
+    ShowMessage(this->fileName +" NU EXISTA!");
+    text="FFFFFFFF";
+   }
    return text;
 }
 BMP::~BMP()//necesar dezalocarii memoriei

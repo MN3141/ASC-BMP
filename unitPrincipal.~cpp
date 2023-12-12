@@ -31,8 +31,8 @@ void __fastcall TfPrincipal::btnGenImagineClick(TObject *Sender)
 
 void __fastcall TfPrincipal::btnGenTextClick(TObject *Sender)
 {
-               //BMP test;
-               //test.createText("imagini\\test2.bmp");
+               BMP test;
+               test.createText("imagini\\default.bmp");
 }
 //---------------------------------------------------------------------------
 
