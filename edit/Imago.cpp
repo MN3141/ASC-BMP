@@ -7,7 +7,7 @@
 #include "Imago.h"
 Imago :: Imago(AnsiString text)
 {
-     this->numPixels=text.Length();
+ /*    this->numPixels=text.Length();
      this->imageHeight=0;
      if(this->numPixels %2==0)
            {
@@ -24,7 +24,7 @@ Imago :: Imago(AnsiString text)
      (pixels+i)->r=0;
      (pixels+i)->g=0;
       (pixels+i)->b=text.operator[](i);
-     }
+     }  */
 }
 Imago::~Imago()
 {

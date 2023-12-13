@@ -1,6 +1,6 @@
 object fImage: TfImage
-  Left = 302
-  Top = 129
+  Left = 201
+  Top = 177
   Width = 1044
   Height = 540
   Caption = 'Imagine'
