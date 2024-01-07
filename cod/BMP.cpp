@@ -61,6 +61,7 @@ void BMP:: createImageHidden()
 void BMP:: createImageCreative()
 {
 
+
 }
 AnsiString BMP::createText()
 {
@@ -69,19 +70,17 @@ AnsiString BMP::createText()
       fin.seekg(54,ios::beg);
       byte *temp=new byte;
       fin.read(temp,1);
-       //ShowMessage(*(temp));
       int size=*temp;
       temp=new byte[size];
       fin.read(temp,size);
-      //ShowMessage(*(temp+size-1));
       for(int i=0;i<size;i++)
       {
-      //ShowMessage(*(temp+i));
        message=message+(char)(*(temp+i));
       }
       delete temp;
-      return message;
       fin.close();
+      return message;
+
 }
 BMP::~BMP()//necesar dezalocarii memoriei
 {

@@ -1,0 +1,3 @@
+v0.0-Creare schelet;Data:06.12.2023
+v0.1-Implementare scriere in fisiere;Data:09.12.2023
+v0.2-Restructurare majora

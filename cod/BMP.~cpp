@@ -61,24 +61,21 @@ void BMP:: createImageHidden()
 void BMP:: createImageCreative()
 {
 
+
 }
 AnsiString BMP::createText()
 {
-     AnsiString message="asdasd";
+     AnsiString message="";
       std::ifstream fin(this->inputFileName.c_str(),ios::binary);
       fin.seekg(54,ios::beg);
       byte *temp=new byte;
       fin.read(temp,1);
-       //ShowMessage(*(temp));
       int size=*temp;
-      ShowMessage(message.operator[](1));
       temp=new byte[size];
       fin.read(temp,size);
-      //ShowMessage(*(temp+size-1));
-      for(int i=1;i<size;i++)
+      for(int i=0;i<size;i++)
       {
-      //ShowMessage(*(temp+i));
-       //message.operator[](i)='a';
+       message=message+(char)(*(temp+i));
       }
       delete temp;
       return message;

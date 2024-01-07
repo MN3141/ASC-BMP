@@ -14,6 +14,8 @@ struct Pixel{
 class Imago{
      protected:
      AnsiString text;
+     byte bmpHeader[14];
+     byte dibHeader[40];
      int imageWidth;
      int imageHeight;
      Pixel *pixels;
