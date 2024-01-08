@@ -5,12 +5,6 @@
 #include <vcl.h>
 using namespace std;
 typedef unsigned char byte;
-struct Pixel{
-//cod RGB
-   byte r;
-   byte g;
-   byte b;
-};
 class Imago{
      protected:
      AnsiString text;
@@ -18,7 +12,6 @@ class Imago{
      byte dibHeader[40];
      int imageWidth;
      int imageHeight;
-     Pixel *pixels;
      int numPixels;
      Imago();
      ~Imago();

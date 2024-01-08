@@ -56,13 +56,51 @@ void BMP:: createImageHidden()
          }
          fin.close();
          fout.close();
-         delete temp;
+         delete[] temp;
 }
 void BMP:: createImageCreative()
 {
-
-
+//Fie num=nr simboluri citite
+//Vom crea imagini patratice de latura n:
+//n=((1+num+k)/2)
+//unde,1 reprezinta stocarea nr de simboluri la adresa 36h
+//     k=(1+num)%2,pentru a obtine o valoare para
+ int n=(1+this->text.Length()+(( 1+this->text.Length() )%2) )/2;
+//Pentru a respecta standardul BMP vom adauga la nevoie octetii de padding
+ int padding=(4-(n*3)%4)%4;//inmultim cu 3 deoarece 1 pixel necesita 3 octeti
+ int bitmapDataSize=n*n*3+padding*n;
+ int fileSize=54+bitmapDataSize;//54=dimensiunea celor 2 antete
+ this->bmpHeader[2]=fileSize;
+ this->bmpHeader[3]=fileSize>>8;
+ this->bmpHeader[4]=fileSize>>16;
+ this->bmpHeader[5]=fileSize>>16;
+ this->dibHeader[4]=n;//lungime imagine
+ this->dibHeader[5]=n>>8;
+ this->dibHeader[6]=n>>16;
+ this->dibHeader[7]=n>>24;
+ this->dibHeader[8]=n;//latime imagine
+ this->dibHeader[9]=n>>8;
+ this->dibHeader[10]=n>>16;
+ this->dibHeader[11]=n>>24;
+ this->dibHeader[20]=bitmapDataSize;//dimensiune pixeli+padding
+ this->dibHeader[21]=bitmapDataSize>>8;
+ this->dibHeader[22]=bitmapDataSize>>16;
+ this->dibHeader[23]=bitmapDataSize>>24;
+ byte *bitmapData=new byte[bitmapDataSize];
+ bitmapData[0]=this->text.Length();
+ for(int i=1;i<=this->text.Length();i++)
+        bitmapData[i]=this->text.operator [](i);
+ for(int i=this->text.Length()+1;i<bitmapDataSize;i++)
+        bitmapData[i]=0;
+ std::ofstream fout(this->outputFileName.c_str(),std::ios::binary);
+ fout.write(this->bmpHeader,14);
+ fout.write(this->dibHeader,40);
+ fout.write(bitmapData,bitmapDataSize);
+ fout.close();
+ delete[] bitmapData;
+ ShowMessage(n+" "+padding);
 }
+
 AnsiString BMP::createText()
 {
      AnsiString message="";
@@ -78,12 +116,13 @@ AnsiString BMP::createText()
        message=message+(char)(*(temp+i));
       }
       delete temp;
-      return message;
       fin.close();
+      return message;
+
 }
-BMP::~BMP()//necesar dezalocarii memoriei
+BMP::~BMP()
 {
-    //delete this->imageFile;
+
 }
 
 //---------------------------------------------------------------------------
