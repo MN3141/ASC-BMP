@@ -1,8 +1,0 @@
-Macarie Breazu Programare Orientata pe Obiecte.Principii
-cplusplus.com
-	https://cplusplus.com/reference/fstream/fstream/
-http://docwiki.embarcadero.com/RADStudio/Tokyo/en/VCL 
-Youtube:https://www.youtube.com/watch?v=vqT5j38bWGg
-https://docwiki.embarcadero.com/Libraries/Alexandria/en/System.SysUtils.EAccessViolation
-https://www.functionx.com/bcb/fileprocessing/vclfilestream.htm
-https://en.wikipedia.org/wiki/BMP_file_format

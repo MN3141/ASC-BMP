@@ -98,7 +98,6 @@ void BMP:: createImageCreative()
  fout.write(bitmapData,bitmapDataSize);
  fout.close();
  delete[] bitmapData;
- ShowMessage(n+" "+padding);
 }
 
 AnsiString BMP::createText()
@@ -120,10 +119,7 @@ AnsiString BMP::createText()
       return message;
 
 }
-BMP::~BMP()
-{
-
-}
+BMP::~BMP();
 
 //---------------------------------------------------------------------------
 

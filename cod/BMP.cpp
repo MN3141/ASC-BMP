@@ -119,11 +119,11 @@ AnsiString BMP::createText()
       return message;
 
 }
+
 BMP::~BMP()
 {
 
 }
-
 //---------------------------------------------------------------------------
 
 #pragma package(smart_init)

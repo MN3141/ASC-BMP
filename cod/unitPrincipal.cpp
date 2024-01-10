@@ -1,4 +1,4 @@
-//---------------------------------------------------------------------------
+ //---------------------------------------------------------------------------
 #include <vcl.h>
 #pragma hdrstop
 
@@ -54,6 +54,11 @@ void __fastcall TfPrincipal::btnSablonClick(TObject *Sender)
                 bmpFile.setInputFileName(openPicDialog->FileName);
                  }
 
+}
+
+void __fastcall TfPrincipal::btnExitClick(TObject *Sender)
+{
+        exit(0);
 }
 //---------------------------------------------------------------------------
 #pragma package(smart_init)

@@ -19,14 +19,16 @@ __published:	// IDE-managed Components
         TButton *btnGenText;
         TButton *btnSablon;
         TCheckBox *checkBoxMode;
-        TEdit *editInput;
         TImage *imgInput;
         TImage *imgOutput;
         TOpenPictureDialog *openPicDialogText;
         TOpenPictureDialog *openPicDialog;
+        TMemo *editInput;
+        TButton *btnExit;
         void __fastcall btnGenImagineClick(TObject *Sender);
         void __fastcall btnGenTextClick(TObject *Sender);
         void __fastcall btnSablonClick(TObject *Sender);
+        void __fastcall btnExitClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
         BMP bmpFile;

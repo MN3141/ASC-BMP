@@ -32,14 +32,14 @@ void __fastcall TfPrincipal::btnGenImagineClick(TObject *Sender)
 void __fastcall TfPrincipal::btnGenTextClick(TObject *Sender)
 {
           openPicDialogText->Execute();
-          ShowMessage( openPicDialogText->FileName);
-          if(openPicDialog->FileName != "")
+          if(openPicDialogText->FileName != "")
                {
                 imgOutput->Picture->LoadFromFile(openPicDialogText->FileName);
                 imgOutput->Stretch = true;
                 bmpFile.setInputFileName(openPicDialogText->FileName);
                 editInput->Text=bmpFile.createText();
                  }
+
 }
 //---------------------------------------------------------------------------
 

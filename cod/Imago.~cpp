@@ -32,13 +32,10 @@ Imago :: Imago()
    this->dibHeader[17]=0;
    this->dibHeader[18]=0;
    this->dibHeader[19]=0;
-   for(int i=32;i<=39;i++)//setare paleta culori
+   for(int i=24;i<=39;i++)//setare paleta culori
       this->dibHeader[i]=0;
 }
-Imago::~Imago()
-{
-
-}
+Imago::~Imago();
 //---------------------------------------------------------------------------
 
 #pragma package(smart_init)

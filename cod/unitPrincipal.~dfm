@@ -1,6 +1,6 @@
 object fPrincipal: TfPrincipal
-  Left = 232
-  Top = 122
+  Left = 329
+  Top = 256
   Width = 1045
   Height = 522
   Caption = 'ASC-BMP'
@@ -64,7 +64,7 @@ object fPrincipal: TfPrincipal
     Left = 392
     Top = 96
     Width = 177
-    Height = 57
+    Height = 21
     TabOrder = 4
     Text = 'IPRS BALGRAD'
   end

@@ -1,10 +1,10 @@
 object fPrincipal: TfPrincipal
-  Left = 232
-  Top = 122
+  Left = 239
+  Top = 136
   Width = 1045
   Height = 522
   Caption = 'ASC-BMP'
-  Color = clBtnFace
+  Color = clSilver
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -14,19 +14,19 @@ object fPrincipal: TfPrincipal
   PixelsPerInch = 96
   TextHeight = 13
   object imgInput: TImage
-    Left = 16
-    Top = 16
-    Width = 337
-    Height = 265
+    Left = 0
+    Top = 0
+    Width = 393
+    Height = 273
   end
   object imgOutput: TImage
-    Left = 672
-    Top = 16
-    Width = 337
-    Height = 265
+    Left = 640
+    Top = 0
+    Width = 393
+    Height = 273
   end
   object btnGenImagine: TButton
-    Left = 616
+    Left = 704
     Top = 296
     Width = 105
     Height = 73
@@ -35,8 +35,8 @@ object fPrincipal: TfPrincipal
     OnClick = btnGenImagineClick
   end
   object btnGenText: TButton
-    Left = 616
-    Top = 376
+    Left = 704
+    Top = 368
     Width = 105
     Height = 73
     Caption = 'Generare text'
@@ -53,27 +53,39 @@ object fPrincipal: TfPrincipal
     OnClick = btnSablonClick
   end
   object checkBoxMode: TCheckBox
-    Left = 160
-    Top = 376
-    Width = 129
+    Left = 152
+    Top = 360
+    Width = 145
     Height = 57
     Caption = 'Mod creativ'
     TabOrder = 3
   end
-  object editInput: TEdit
+  object editInput: TMemo
     Left = 392
-    Top = 96
-    Width = 177
-    Height = 57
+    Top = 0
+    Width = 249
+    Height = 273
+    Color = clMenu
+    Lines.Strings = (
+      'editInput')
+    ScrollBars = ssVertical
     TabOrder = 4
-    Text = 'IPRS BALGRAD'
+  end
+  object btnExit: TButton
+    Left = 456
+    Top = 304
+    Width = 113
+    Height = 57
+    Caption = 'Exit'
+    TabOrder = 5
+    OnClick = btnExitClick
   end
   object openPicDialogText: TOpenPictureDialog
-    Left = 768
+    Left = 816
     Top = 408
   end
   object openPicDialog: TOpenPictureDialog
     Left = 304
-    Top = 400
+    Top = 408
   end
 end
